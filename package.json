@@ -28,6 +28,16 @@
   "bin": {
     "genmochatest": "./bin/genmochatest"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "bin",
+    "index.js",
+    "lib",
+    "manual-test",
+    "package.json",
+    "test"
+  ],
   "dependencies": {
     "escape-string-regexp": "1.0.3",
     "minimist": "1.2.0",

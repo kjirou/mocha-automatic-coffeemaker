@@ -1,2 +1,3 @@
 # mocha-automatic-coffeemaker
-Generate a test file by the same path structure
+
+Generate a test code of [mocha](https://www.npmjs.com/package/mocha) by the same path structure

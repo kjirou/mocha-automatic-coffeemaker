@@ -1,0 +1,40 @@
+{
+  "name": "mocha-automatic-coffeemaker",
+  "version": "0.0.0",
+  "description": "Generate a test code of mocha by the same path structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjirou/mocha-automatic-coffeemaker.git"
+  },
+  "keywords": [
+    "mocha",
+    "generator",
+    "test"
+  ],
+  "author": "kjirou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjirou/mocha-automatic-coffeemaker/issues"
+  },
+  "homepage": "https://github.com/kjirou/mocha-automatic-coffeemaker#readme",
+  "engines": {
+    "node": ">=0.12",
+    "npm": ">=2"
+  },
+  "bin": {
+    "genmochatest": "./bin/genmochatest"
+  },
+  "dependencies": {
+    "escape-string-regexp": "1.0.3",
+    "minimist": "1.2.0",
+    "mkdirp": "0.5.1",
+    "promise-defer": "1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "2.3.3"
+  }
+}

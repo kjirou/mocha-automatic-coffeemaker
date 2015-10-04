@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var generateTest = require('../index');
+
+
+generateTest(process.argv.slice(), function(err, outputs) {
+  if (err) {
+    console.error(err.stack);
+    process.exit(1);
+    return;
+  }
+  console.log(outputs.join('\n'));
+  process.exit(0);
+});

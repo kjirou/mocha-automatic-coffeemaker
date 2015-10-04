@@ -18,8 +18,8 @@ module.exports = function generateTest(argv, callback) {
       force: false,
       omission: null,
       prefix: 'test',
-      root: __dirname,
-      template: path.join(__dirname, 'mocha-automatic-coffeemaker-template.js')
+      root: process.cwd(),
+      template: path.join(process.cwd(), 'mocha-automatic-coffeemaker-template.js')
     },
     alias: {
       e: ['extensions'],

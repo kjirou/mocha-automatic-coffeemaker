@@ -13,6 +13,23 @@ npm install -g mocha-automatic-coffeemaker
 ```
 
 
+## Example
+
+```bash
+$ genmochatest lib/utils.js
+Generated successfully!
+root: /home/username/your-project
+src : lib/utils.js
+test: test/lib/utils.js
+```
+
+```bash
+$ cat test/lib/utils.js
+describe('lib/utils', function() {
+});
+```
+
+
 ## Usage
 
 ```
@@ -48,4 +65,24 @@ $ genmochatest [options] <target-file-path>
 
   --template, -t
     Default: process.cwd() + '/mocha-automatic-coffeemaker-template.js'
+```
+
+
+## Template Example
+
+You can specify the template of test code like the following code:
+
+```js
+module.exports = function(data) {
+
+  var filePath = data.filePath;
+  var noExtensionFilePath = data.noExtensionFilePath;
+  var fileName = data.fileName;
+  var noExtensionFileName = data.noExtensionFileName;
+
+  return [
+    "describe('" + noExtensionFilePath + "', function() {",
+    "});",
+  ].join('\n');
+};
 ```

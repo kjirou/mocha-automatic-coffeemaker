@@ -21,7 +21,7 @@ module.exports = function generateTest(argv, callback) {
     omission: null,
     root: process.cwd(),
     template: path.join(process.cwd(), 'mocha-automatic-coffeemaker-template.js')
-  }, pkg[pkg.name] || {});
+  }, pkg['mocha-automatic-coffeemaker'] || {});
 
   var commandOptions = minimist(argv.slice(2), {
     default: defaultOptions,

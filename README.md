@@ -54,6 +54,9 @@ $ genmochatest [options] <target-file-path>
 
 [options]
 
+  --dirname, -d
+    Default: 'test'
+
   --extensions, -e
     Default: 'js,es,es6,es7,coffee,ts'
 
@@ -63,9 +66,6 @@ $ genmochatest [options] <target-file-path>
 
   --omission, -o
     Default: null
-
-  --prefix, -p
-    Default: 'test'
 
   --root, -r
     Default: process.cwd()

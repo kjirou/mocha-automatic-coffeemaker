@@ -15,10 +15,10 @@ var utils = require('./lib/utils');
 module.exports = function generateTest(argv, callback) {
 
   var defaultOptions = objectAssign({}, {
+    dirname: 'test',
     extensions: 'js,es,es6,es7,coffee,ts',
     force: false,
     omission: null,
-    prefix: 'test',
     root: process.cwd(),
     template: path.join(process.cwd(), 'mocha-automatic-coffeemaker-template.js')
   }, pkg[pkg.name] || {});
@@ -26,10 +26,10 @@ module.exports = function generateTest(argv, callback) {
   var commandOptions = minimist(argv.slice(2), {
     default: defaultOptions,
     alias: {
+      d: ['dirname'],
       e: ['extensions'],
       f: ['force'],
       o: ['omission'],
-      p: ['prefix'],
       r: ['root'],
       t: ['template']
     }
@@ -56,7 +56,7 @@ module.exports = function generateTest(argv, callback) {
         ''
       );
   }
-  var relativeTestFilePath = path.join(commandOptions.prefix, omittedRelativeTargetFilePath);
+  var relativeTestFilePath = path.join(commandOptions.dirname, omittedRelativeTargetFilePath);
 
 
   //

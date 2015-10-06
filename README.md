@@ -15,15 +15,22 @@ npm install -g mocha-automatic-coffeemaker
 
 ## Example
 
+There is a targeted file of testing:
+
+```bash
+$ tree ./lib
+lib
+└── util.js
+```
+
+Generate a mocha's test code:
+
 ```bash
 $ genmochatest lib/utils.js
 Generated successfully!
 root: /home/username/your-project
 src : lib/utils.js
 test: test/lib/utils.js
-```
-
-```bash
 $ cat test/lib/utils.js
 describe('lib/utils', function() {
 });
@@ -75,10 +82,18 @@ You can specify the template of test code like the following code:
 ```js
 module.exports = function(data) {
 
+  // e.g. "foo/bar/baz.js"
   var filePath = data.filePath;
+  // e.g. "foo/bar/baz"
   var noExtensionFilePath = data.noExtensionFilePath;
+  // e.g. "baz.js"
   var fileName = data.fileName;
+  // e.g. "baz"
   var noExtensionFileName = data.noExtensionFileName;
+
+  // e.g. If you specified `--omission bar`, then it assigned "foo/baz.js"
+  var omittedFilePath = data.omittedFilePath;
+  var noExtensionOmittedFilePath = data.noExtensionOmittedFilePath;
 
   return [
     "describe('" + noExtensionFilePath + "', function() {",

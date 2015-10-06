@@ -66,12 +66,22 @@ $ genmochatest [options] <target-file-path>
 
   --omission, -o
     Default: null
+    Excluded from the path in front match at the time of test generation
 
   --root, -r
     Default: process.cwd()
 
   --template, -t
     Default: process.cwd() + '/mocha-automatic-coffeemaker-template.js'
+```
+
+Default options can also be defined in the package.json:
+
+```
+"mocha-automatic-coffeemaker": {
+  "dirname": "spec",
+  "force": true
+},
 ```
 
 

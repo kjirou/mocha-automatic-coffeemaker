@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+var pkg = require('./package.json');
 var escapeStringRegExp = require('escape-string-regexp');
 var fs = require('fs');
 var minimist = require('minimist');
 var mkdirp = require('mkdirp');
+var objectAssign = require('object-assign');
 var path = require('path');
 var defer = require("promise-defer");
 
@@ -12,15 +14,17 @@ var utils = require('./lib/utils');
 
 module.exports = function generateTest(argv, callback) {
 
+  var defaultOptions = objectAssign({}, {
+    extensions: 'js,es,es6,es7,coffee,ts',
+    force: false,
+    omission: null,
+    prefix: 'test',
+    root: process.cwd(),
+    template: path.join(process.cwd(), 'mocha-automatic-coffeemaker-template.js')
+  }, pkg[pkg.name] || {});
+
   var commandOptions = minimist(argv.slice(2), {
-    default: {
-      extensions: 'js,es,es6,es7,coffee,ts',
-      force: false,
-      omission: null,
-      prefix: 'test',
-      root: process.cwd(),
-      template: path.join(process.cwd(), 'mocha-automatic-coffeemaker-template.js')
-    },
+    default: defaultOptions,
     alias: {
       e: ['extensions'],
       f: ['force'],

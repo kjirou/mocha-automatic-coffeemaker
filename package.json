@@ -43,6 +43,7 @@
     "escape-string-regexp": "1.0.3",
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
+    "object-assign": "4.0.1",
     "promise-defer": "1.0.0"
   },
   "devDependencies": {

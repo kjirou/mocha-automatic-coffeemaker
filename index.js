@@ -122,6 +122,8 @@ module.exports = function generateTest(argv, callback) {
       var testCode = testCodeTemplate({
         filePath: relativeTargetFilePath,
         noExtensionFilePath: utils.cutExtension(relativeTargetFilePath, targetExtensions),
+        omittedFilePath: omittedRelativeTargetFilePath,
+        noExtensionOmittedFilePath: utils.cutExtension(omittedRelativeTargetFilePath, targetExtensions),
         fileName: path.basename(targetFilePath),
         noExtensionFileName: utils.cutExtension(path.basename(targetFilePath), targetExtensions)
       });

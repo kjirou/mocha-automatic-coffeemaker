@@ -4,6 +4,7 @@
   "description": "Generate a test code of mocha by the same path structure",
   "main": "index.js",
   "scripts": {
+    "manual-test": "./bin/genmochatest -f -o manual-test/foo -p manual-test-dist -t manual-test/template.js manual-test/foo/bar/b.js && cat manual-test-dist/bar/b.js",
     "test": "mocha"
   },
   "repository": {

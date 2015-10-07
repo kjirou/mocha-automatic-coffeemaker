@@ -1,0 +1,7 @@
+{
+  "mocha-automatic-coffeemaker": {
+    "dirname": "spec",
+    "force": true,
+    "omission": "src"
+  }
+}

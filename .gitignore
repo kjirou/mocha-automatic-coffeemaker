@@ -34,4 +34,4 @@ pip-log.txt
 testem.*.*.*.json
 
 
-/manual-test-dist/
+/dist/

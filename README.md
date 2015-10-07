@@ -58,7 +58,7 @@ $ genmochatest [options] <target-file-path>
     Default: 'test'
 
   --extensions, -e
-    Default: 'js,es,es6,es7,coffee,ts'
+    Default: 'js,es,es6,es7,coffee,ts,jsx'
 
   --force, -f
     Default: false

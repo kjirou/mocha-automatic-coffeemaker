@@ -25,7 +25,7 @@ describe('mocha-automatic-coffeemaker', function() {
       root = path.join(__dirname, 'support/no-settings-packagejson');
       assert.deepEqual(utils.createDefaultOptions(root), {
         dirname: 'test',
-        extensions: 'js,es,es6,es7,coffee,ts',
+        extensions: 'js,es,es6,es7,coffee,ts,jsx',
         force: false,
         omission: null,
         root: root,
@@ -35,7 +35,7 @@ describe('mocha-automatic-coffeemaker', function() {
       root = path.join(__dirname, 'support');
       assert.deepEqual(utils.createDefaultOptions(root), {
         dirname: 'spec',
-        extensions: 'js,es,es6,es7,coffee,ts',
+        extensions: 'js,es,es6,es7,coffee,ts,jsx',
         force: true,
         omission: 'src',
         root: root,

@@ -1,6 +1,6 @@
 {
   "name": "mocha-automatic-coffeemaker",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Generate a test code of mocha by the same path structure",
   "main": "index.js",
   "scripts": {
